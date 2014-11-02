@@ -1,364 +1,74 @@
+{% extends "base.html" %}
+{% load i18n %}
 
-<!doctype html>
-<html lang="en">
+{% block meta_title %}{% trans "Home" %}{% endblock %}
+{% block title %}{% trans "Home" %}{% endblock %}
 
+{% block breadcrumb_menu %}
+<li class="active">{% trans "Home" %}</li>
+{% endblock %}
 
-<head>
-<meta http-equiv="Content-type" content="text/html; charset=utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="keywords" content="">
-<meta name="description" content="Shop">
-<title>Shop | TextbookTrader</title>
-<link rel="shortcut icon" href="/static/img/favicon.ico">
+{% block main %}
+{% blocktrans %}
+<p>
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
 
-
-<link rel="alternate" type="application/rss+xml" title="RSS" href="/blog/feeds/rss/">
-<link rel="alternate" type="application/atom+xml" title="Atom" href="/blog/feeds/atom/">
-
-
-
-<link rel="stylesheet" href="/static/css/bootstrap.css">
-<link rel="stylesheet" href="/static/css/mezzanine.css">
-<link rel="stylesheet" href="/static/css/bootstrap-theme.css">
-
-
-<link rel="stylesheet" href="/static/css/cartridge.css">
-
-
-
-
-
-
-<script src="/static/mezzanine/js/jquery-1.7.1.min.js"></script>
-<script src="/static/js/bootstrap.js"></script>
-<script src="/static/js/bootstrap-extras.js"></script>
-
-
-
-<!--[if lt IE 9]>
-<script src="/static/js/html5shiv.js"></script>
-<script src="/static/js/respond.min.js"></script>
-<![endif]-->
-
-
-</head>
-
-<body id="category">
-
-<div class="navbar navbar-default navbar-fixed-top" role="navigation">
-<div class="container">
-<div class="navbar-header">
-    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle Navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="/">TextbookTrader</a>
-    <p class="navbar-text visible-lg">Textbook Trade. Made Easy!</p>
-</div>
-<div class="navbar-collapse collapse">
-    
-<form action="/search/" class="navbar-form navbar-right" role="search">
-
-<div class="form-group">
-    <input class="form-control" placeholder="Search" type="text" name="q" value="">
-</div>
-
-
-    
-    <div class="form-group">
-    <select class="form-control" name="type">
-        <option value="">Everything</option>
-        
-        <option value="blog.BlogPost"
-            >
-            Blog posts
-        </option>
-        
-        <option value="pages.Page"
-            >
-            Pages
-        </option>
-        
-        <option value="shop.Product"
-            >
-            Products
-        </option>
-        
-    </select>
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="../static/media/uploads/college_major.jpg" alt="..." style="
+      	width: 653px;
+      	height: 410px;">
+      <div class="carousel-caption">
+      <h3>Welcome</h3>
+    	<p>To the premier college textbook trading site</p>
+      </div>
     </div>
-    
-
-
-<input type="submit" class="btn btn-default" value="Go">
-
-</form>
-
-    
-<ul class="nav navbar-nav"><li id="dropdown-menu-home"><a href="/">Home</a></li><li class="dropdown
-               "
-        id="about"><a href="/about/"
-        
-        class="dropdown-toggle disabled" data-toggle="dropdown"
-        >
-            About
-            <b class="caret"></b></a><ul class="dropdown-menu"><li class="
-               "
-        id="about-team"><a href="/about/team/">Team</a></li><li class="
-               "
-        id="about-history"><a href="/about/history/">History</a></li></ul></li><li class="
-               active"
-        id="shop"><a href="/shop/"
-        >
-            Shop
-            
-        </a></li><li class="dropdown
-               "
-        id="contact"><a href="/contact/"
-        
-        class="dropdown-toggle disabled" data-toggle="dropdown"
-        >
-            Contact
-            <b class="caret"></b></a><ul class="dropdown-menu"><li class="
-               "
-        id="contact-legals"><a href="/contact/legals/">Legals</a></li></ul></li><li class="
-               "
-        id="http:--127.0.0.1:8000-admin"><a href="http://127.0.0.1:8000/admin"
-        >
-            Sellers
-            
-        </a></li></ul>
-
-</div>
-</div>
-</div>
-
-<div class="container">
-
-
-
-
-
-<h1>
-Shop
-</h1>
-
-<ul class="breadcrumb">
-<li id="breadcrumb-menu-home"><a href="/">Home</a></li><li id="breadcrumb-menu-shop"
-        class="active">Shop</li>
-</ul>
-
-</div>
-
-<div class="container">
-<div class="row">
-
-<div class="col-md-2 left">
-    
-    <div class="panel panel-default tree">
-
-<ul class="nav nav-list navlist-menu-level-0"><li id="tree-menu-home"><a href="/">Home</a></li><li class="
-    
-    
-    " id="tree-menu-about"><a href="/about/">About</a><ul class="nav nav-list navlist-menu-level-1"><li class="
-    
-    
-    " id="tree-menu-about-team"><a href="/about/team/">Team</a></li><li class="
-    
-    
-    " id="tree-menu-about-history"><a href="/about/history/">History</a></li></ul></li><li class="
-     active
-     active-branch
-    " id="tree-menu-shop"><a href="/shop/">Shop</a></li><li class="
-    
-    
-    " id="tree-menu-contact"><a href="/contact/">Contact</a><ul class="nav nav-list navlist-menu-level-1"><li class="
-    
-    
-    " id="tree-menu-contact-legals"><a href="/contact/legals/">Legals</a></li></ul></li><li class="
-    
-    
-    " id="tree-menu-http:--127.0.0.1:8000-admin"><a href="http://127.0.0.1:8000/admin">Sellers</a></li></ul>
-</div>
-    
-</div>
-
-<div class="col-md-7 middle">
-    
-
-
-
-<p>Shop</p>
-
-
-
-
-
-
-<form class="product-sorting" role="form">
-    <div class="form-group">
-    <label class="control-label" for="sorting-select">Sort by</label>
-        <select onchange="location.href = this[this.selectedIndex].value;" class="form-control" id="sorting-select">
-        
-        
-        <option selected
-            value="?sort=-date_added">
-            Recently added
-        </option>
-        
-        
-        
-        <option
-            value="?sort=-rating_average">
-            Highest rated
-        </option>
-        
-        
-        
-        <option
-            value="?sort=unit_price">
-            Least expensive
-        </option>
-        
-        
-        
-        <option
-            value="?sort=-unit_price">
-            Most expensive
-        </option>
-        
-        
-        </select>
+    <div class="item">
+      <img src="../static/media/uploads/bookcase.jpg" alt="..." style="
+      	width: 653px;
+      	height: 410px;">
+      <div class="carousel-caption">
+      <h3>Easy</h3>
+    	<p>We provide the easiest solution to selling your textbooks</p>
+      </div>
     </div>
-</form>
-
-<div class="row product-list">
-
-    <div class="col-xs-6 col-sm-4 col-lg-3 product-thumb">
-    <a href="/shop/product/zebras/" class="thumbnail">
-        
-        <img src="/static/media/product/.thumbnails/Zebra.png/Zebra-148x148.png">
-        
-        <div class="caption">
-        <h6>Zebras</h6>
-        <div class="price-info">
-        
-            
-            <span class="price">$5.00</span>
-        
-        </div>
-        </div>
-    </a>
+    <div class="item">
+      <img src="../static/media/uploads/campus_scenery.jpg" alt="..." style="
+      	width: 653px;
+      	height: 410px;">
+      <div class="carousel-caption">
+      <h3>College</h3>
+    	<p>Connecting college communities through trade</p>
+      </div>
     </div>
+  </div>
 
-    <div class="col-xs-6 col-sm-4 col-lg-3 product-thumb">
-    <a href="/shop/product/django-pony/" class="thumbnail">
-        
-        <img src="/static/media/product/.thumbnails/red.png/red-148x148.png">
-        
-        <div class="caption">
-        <h6>Django Pony</h6>
-        <div class="price-info">
-        
-            
-            <span class="price">$10.00</span>
-        
-        </div>
-        </div>
-    </a>
-    </div>
-
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
 </div>
-
-
-
-
-
-
-
-
-
-</div>
-
-<div class="col-md-3 right">
-    
-    
-<div class="panel panel-default user-panel">
-    <div class="panel-body">
-    <a href="/shop/cart/"><span class="glyphicon glyphicon-shopping-cart"></span>
-    1 item
-    in cart:
-    $5.00</a><br><a href="/shop/checkout/" class="btn btn-primary">
-        Go to Checkout
-    </a><br><a href="/shop/wishlist/" class="btn-wishlist"><span class="glyphicon glyphicon-star"></span>
-     Wishlist contains 0 items</a><br><a href="/accounts/login/?next=/shop/" class="btn btn-default btn-sm btn-account"><span class="glyphicon glyphicon-log-in"></span> Log in</a>
-    &nbsp;or&nbsp;
-    <a href="/accounts/signup/?next=/shop/" class="btn btn-default btn-sm btn-account"><span class="glyphicon glyphicon-edit"></span> Sign up</a>
-    </div>
-</div>
-
-    
-    <div class="panel panel-default">
-    <div class="panel-body">
-    
-    
-    
-
-
-
-
-
-
-    
-    
-    </div>
-    </div>
-</div>
-
-</div>
-</div>
-
-<footer>
-<div class="container">
-
-
-<div class="nav-footer"><ul class="list-unstyled"><li 
-            id="footer-menu-about"><a href="/about/">About</a></li><li 
-            id="footer-menu-about-team"><a href="/about/team/">Team</a></li><li 
-            id="footer-menu-about-history"><a href="/about/history/">History</a></li></ul><ul class="list-unstyled"><li class="active"
-            id="footer-menu-shop"><a href="/shop/">Shop</a></li></ul><ul class="list-unstyled"><li 
-            id="footer-menu-contact"><a href="/contact/">Contact</a></li><li 
-            id="footer-menu-contact-legals"><a href="/contact/legals/">Legals</a></li></ul><ul class="list-unstyled"><li 
-            id="footer-menu-http:--127.0.0.1:8000-admin"><a href="http://127.0.0.1:8000/admin">Sellers</a></li></ul></div>
-
-
-<div class="row">
-<p class="site-info text-center">
-    Powered by
-    <a href="http://mezzanine.jupo.org">Mezzanine</a>,
-    <a href="http://cartridge.jupo.org">Cartridge</a>
-    and
-    <a href="http://www.djangoproject.com">Django</a>
-    <span class="separator">|</span>
-    Theme by <a target="_blank" href="http://getbootstrap.com">Bootstrap</a>
-    
 </p>
-</div>
-</div>
-</footer>
-
-
-
-
-
-
-
-
-<script>
-
-</script>
-
-
-</body>
-</html>
+<ul>
+   <!-- <li><a href="/admin/">Log in to the admin interface</a></li>
+    <li><a href="http://mezzanine.jupo.org/docs/content-architecture.html">Creating custom page types</a></li>
+    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#templates">Modifying HTML templates</a></li>
+    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html#why-isn-t-the-homepage-a-page-object-i-can-edit-via-the-admin">Changing this homepage</a></li>
+    <li><a href="http://mezzanine.jupo.org/docs/frequently-asked-questions.html">Other frequently asked questions</a></li>
+    <li><a href="http://mezzanine.jupo.org/docs/configuration.html#default-settings">Full list of settings</a></li>
+    <li><a href="http://mezzanine.jupo.org/docs/deployment.html">Deploying to a production server</a></li> -->
+</ul>
+{% endblocktrans %}
+{% endblock %}
