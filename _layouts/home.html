@@ -26,6 +26,9 @@ layout: default
     {% if site.json.role %}
     <p><span class="key">role</span><span class="attr">{{ site.json.role }}</span></p>
     {% endif %}
+    {% if site.json.location %}
+    <p><span class="key">location</span><span class="attr">{{ site.json.location }}</span></p>
+    {% endif %}
   </div>
   <div class="block">
     {% if site.json.cv %}
@@ -34,17 +37,13 @@ layout: default
     {% endif %}
   </div>
   <div class="block">
-    {% if site.json.address %}
-    {% if site.json.address.first %}
-    <p><span class="array-key">address</span></p>
+    {% if site.json.profiles %}
+    <span class="array-key">profiles</span>
     <div class="array">
-      {% for i in site.json.address %}
-      <p class="array-attr">{{ i }}</p>
+      {% for i in site.json.profiles %}
+      <p class="array-attr"><a href="{{ i | slice: 1 }}" target="_blank">{{ i | slice: 0 }}</a></p>
       {% endfor %}
     </div>
-    {% else %}
-    <p><span class="key">address</span><span class="attr">{{ site.json.address }}</span></p>
-    {% endif %}
     {% endif %}
   </div>
   <div class="block">
@@ -62,6 +61,20 @@ layout: default
     {% endif %}
   </div>
   <div class="block">
+    {% if site.json.hobbies %}
+    {% if site.json.hobbies.first %}
+    <p><span class="array-key">hobbies</span></p>
+    <div class="array">
+      {% for i in site.json.hobbies %}
+      <p class="array-attr">{{ i }}</p>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p><span class="key">hobbies</span><span class="attr">{{ site.json.hobbies }}</span></p>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="block">
     {% if site.json.contact %}
     {% if site.json.contact.first %}
     <p><span class="list-key">contact</span></p>
@@ -73,16 +86,6 @@ layout: default
     {% else %}
     <p><span class="key">contact</span><span class="attr">{{ site.json.contact }}</span></p>
     {% endif %}
-    {% endif %}
-  </div>
-  <div class="block">
-    {% if site.json.profiles %}
-    <span class="array-key">profiles</span>
-    <div class="array">
-      {% for i in site.json.profiles %}
-      <p class="array-attr"><a href="{{ i | slice: 1 }}" target="_blank">{{ i | slice: 0 }}</a></p>
-      {% endfor %}
-    </div>
     {% endif %}
   </div>
 </main>
