@@ -48,6 +48,20 @@ layout: default
     {% endif %}
   </div>
   <div class="block">
+    {% if site.json.skills %}
+    {% if site.json.skills.first %}
+    <p><span class="array-key">skills</span></p>
+    <div class="array">
+      {% for i in site.json.skills %}
+      <p class="array-attr">{{ i }}</p>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p><span class="key">skills</span><span class="attr">{{ site.json.skills }}</span></p>
+    {% endif %}
+    {% endif %}
+  </div>
+  <div class="block">
     {% if site.json.contact %}
     {% if site.json.contact.first %}
     <p><span class="list-key">contact</span></p>

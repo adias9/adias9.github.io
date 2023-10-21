@@ -12,11 +12,17 @@ json:
   description:
     - Hello!
     - This is my personal website.
-    - It looks like json.
+    - I'm available on LinkedIn.
   role: Engineering manager
   # cv: assets/cv.pdf
   address:
     - New York City, NY
+  skills:
+    - strategy alignment
+    - performance management
+    - empathy & interpersonal skills
+    - technical vision
+    - system design
   profiles:
     linkedin: https://www.linkedin.com/in/andreas-dias
     github: https://github.com/adias9
