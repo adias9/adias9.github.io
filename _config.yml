@@ -11,13 +11,12 @@ json:
   name: andreas dias
   description:
     - Hello!
-    - This is my personal website
-    - It looks like json
+    - This is my personal website.
+    - It looks like json.
   role: Engineering manager
   # cv: assets/cv.pdf
   address:
     - New York City, NY
-  source: https://github.com/piazzai/hacked-jekyll
   profiles:
     linkedin: https://www.linkedin.com/in/andreas-dias
     github: https://github.com/adias9
@@ -25,6 +24,7 @@ json:
 exclude:
   - LICENSE
   - README.md
+  - archive
 
 plugins:
   - jekyll-seo-tag
